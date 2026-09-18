@@ -34,76 +34,27 @@
 
                 <div class="absolute inset-0 z-10 rounded-[inherit] opacity-25 mix-blend-overlay" style="background:linear-gradient(115deg, transparent 40%, #b45309 60%, transparent 62%); background-size:300% 300%; background-position:0 0;"></div>
 
-                {{-- Illustration artistique floutée --}}
-                <div class="absolute z-20 w-[720px] -right-16 top-[42%] translate-y-[-50%] opacity-60 blur-[1px] pointer-events-none animate-float motion-reduce:animate-none">
-                    <svg viewBox="0 0 860 640" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
-                        <defs>
-                            <radialGradient id="glow" cx="0.5" cy="0.42" r="0.55">
-                                <stop offset="0" stop-color="#fcd34d" stop-opacity="0.30" />
-                                <stop offset="0.55" stop-color="#fbbf24" stop-opacity="0.10" />
-                                <stop offset="1" stop-color="#fbbf24" stop-opacity="0" />
-                            </radialGradient>
-                            <linearGradient id="gold" x1="300" y1="210" x2="560" y2="330" gradientUnits="userSpaceOnUse">
-                                <stop offset="0" stop-color="#fde68a" />
-                                <stop offset="0.55" stop-color="#f59e0b" />
-                                <stop offset="1" stop-color="#b45309" />
-                            </linearGradient>
-                            <linearGradient id="goldSoft" x1="0" y1="0" x2="0" y2="1">
-                                <stop offset="0" stop-color="#fde68a" stop-opacity="0.92" />
-                                <stop offset="1" stop-color="#b45309" stop-opacity="0.45" />
-                            </linearGradient>
-                        </defs>
-
-                        <circle cx="430" cy="300" r="250" stroke="#ffffff" stroke-opacity="0.05" />
-                        <circle cx="430" cy="290" r="205" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1.4" />
-                        <circle cx="430" cy="285" r="150" fill="url(#glow)" />
-
-                        <g fill="#fcd34d" transform="translate(140 175) scale(1.05)">
-                            <path d="M0 -11 Q1.6 -1.7 11 0 Q1.6 1.7 0 11 Q-1.6 1.7 -11 0 Q-1.6 -1.7 0 -11 Z" opacity="0.85" />
-                        </g>
-                        <g fill="#fcd34d" transform="translate(715 250) scale(0.8)">
-                            <path d="M0 -11 Q1.6 -1.7 11 0 Q1.6 1.7 0 11 Q-1.6 1.7 -11 0 Q-1.6 -1.7 0 -11 Z" opacity="0.7" />
-                        </g>
-                        <g fill="#fcd34d" transform="translate(120 470) scale(0.6)">
-                            <path d="M0 -11 Q1.6 -1.7 11 0 Q1.6 1.7 0 11 Q-1.6 1.7 -11 0 Q-1.6 -1.7 0 -11 Z" opacity="0.6" />
-                        </g>
-                        <g fill="#fcd34d" transform="translate(740 520) scale(0.95)">
-                            <path d="M0 -11 Q1.6 -1.7 11 0 Q1.6 1.7 0 11 Q-1.6 1.7 -11 0 Q-1.6 -1.7 0 -11 Z" opacity="0.7" />
-                        </g>
-
-                        {{-- Toque de diplôme --}}
-                        <path d="M300 268 L430 326 L430 342 L300 284 Z" fill="#8a4b0b" opacity="0.9" />
-                        <path d="M560 268 L430 326 L430 342 L560 284 Z" fill="#6d3a07" opacity="0.9" />
-                        <path d="M430 210 L560 268 L430 326 L300 268 Z" fill="url(#gold)" />
-                        <rect x="360" y="322" width="140" height="82" rx="32" fill="url(#goldSoft)" />
-                        <rect x="360" y="360" width="140" height="12" rx="6" fill="#78350f" opacity="0.35" />
-                        <circle cx="430" cy="268" r="9" fill="#78350f" />
-                        <circle cx="430" cy="268" r="3.5" fill="#fde68a" opacity="0.8" />
-                        <path d="M430 268 C472 300 505 362 536 404" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" />
-                        <circle cx="540" cy="412" r="8" fill="#f59e0b" />
-                        <circle cx="537" cy="409" r="3" fill="#fde68a" opacity="0.9" />
-
-                        {{-- Livre ouvert --}}
-                        <path d="M430 478 C398 452 352 448 310 464 C322 480 388 494 430 490 Z" fill="#fef3c7" fill-opacity="0.12" stroke="#fde68a" stroke-opacity="0.35" stroke-width="1.2" />
-                        <path d="M430 478 C462 452 508 448 550 464 C538 480 472 494 430 490 Z" fill="#fef3c7" fill-opacity="0.12" stroke="#fde68a" stroke-opacity="0.35" stroke-width="1.2" />
-                        <path d="M408 470 L404 487 M454 470 L458 487" stroke="#fde68a" stroke-opacity="0.25" stroke-width="1" />
-
-                        <circle cx="210" cy="360" r="5" fill="#ffffff" fill-opacity="0.08" />
-                        <circle cx="655" cy="160" r="7" fill="#ffffff" fill-opacity="0.06" />
-                    </svg>
+                {{-- Collage de photos --}}
+                <div class="absolute z-20 right-8 xl:right-12 top-1/2 -translate-y-1/2 w-[min(30rem,72%)] pointer-events-none opacity-70">
+                    <div class="grid grid-cols-2 gap-5">
+                        <img src="{{ asset('img_connexion/photo-1.jpg') }}" alt="" loading="lazy" class="w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-white/20 shadow-2xl shadow-black/60 -rotate-3">
+                        <img src="{{ asset('img_connexion/photo-2.jpg') }}" alt="" loading="lazy" class="w-full aspect-[3/4] object-cover rounded-2xl ring-1 ring-white/20 shadow-2xl shadow-black/60 translate-y-7 rotate-2">
+                    </div>
+                    <img src="{{ asset('img_connexion/photo-3.jpg') }}" alt="" loading="lazy" class="w-3/4 mx-auto mt-7 aspect-[16/10] object-cover rounded-2xl ring-1 ring-white/20 shadow-2xl shadow-black/60 -rotate-1">
                 </div>
 
                 {{-- Voile sombre pour la lisibilité du texte --}}
                 <div class="absolute inset-0 z-30" style="background:linear-gradient(180deg, rgba(10,2,3,0.62) 0%, rgba(10,2,3,0.12) 34%, rgba(10,2,3,0.28) 66%, rgba(8,1,2,0.82) 100%);"></div>
 
+                {{-- Nuancier latéral renforcé : texte à gauche toujours lisible --}}
+                <div class="absolute inset-0 z-[35]" style="background:linear-gradient(90deg, rgba(8,1,2,0.9) 0%, rgba(8,1,2,0.62) 38%, rgba(8,1,2,0.25) 62%, rgba(8,1,2,0) 85%);"></div>
+
                 {{-- Contenu --}}
                 <div class="relative z-40">
 
                     <div class="flex items-center gap-3 animate-fade-in-down motion-reduce:animate-none">
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-300 to-amber-600 flex items-center justify-center text-[#4a0c10] shadow-lg shadow-black/30 ring-1 ring-white/20">
-                            <svg class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                            </svg>
+                        <div class="w-12 h-12 shrink-0 rounded-2xl bg-white flex items-center justify-center overflow-hidden p-1.5 shadow-lg shadow-black/30 ring-1 ring-white/30">
+                            <img src="{{ asset('img_connexion/photo-2.jpg') }}" alt="Logo ESU · UOO" class="w-full h-full object-contain">
                         </div>
                         <div class="leading-tight">
                             <p class="font-bold text-lg tracking-tight">ESU · UOO</p>
@@ -168,10 +119,8 @@
                 <div class="relative w-full max-w-md">
 
                     <div class="lg:hidden flex items-center gap-3 mb-10 animate-fade-in-down motion-reduce:animate-none">
-                        <div class="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#7f1d1d] to-[#991b1b] flex items-center justify-center text-amber-300 ring-1 ring-[#991b1b]/20">
-                            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
-                            </svg>
+                        <div class="w-11 h-11 shrink-0 rounded-2xl bg-white flex items-center justify-center overflow-hidden p-1.5 ring-1 ring-stone-200 shadow-sm">
+                            <img src="{{ asset('img_connexion/photo-2.jpg') }}" alt="Logo ESU · UOO" class="w-full h-full object-contain">
                         </div>
                         <div>
                             <p class="font-bold text-stone-800">ESU · UOO</p>
